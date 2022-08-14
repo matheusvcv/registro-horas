@@ -1,16 +1,9 @@
 
 <?php
-require "conexao.php";
-require "src/registro.php";
 
-	if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
-		$inserir_registros = New Registro($conexao);
-		$inserir = $inserir_registros->inserirRegistros($_POST['projeto'], $_POST['data'], $_POST['hora_inicio'], $_POST['hora_final']);
-	}
+require "protect.php";
 
 
-	
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +12,13 @@ require "src/registro.php";
 	<title></title>
 </head>
 <body>
-	<form method="POST" action="">
+	<a href="logout.php">Sair</a>
+
+	<h1>Registro de Horas trabalhadas</h1>
+
+	<a href="exibe_devs.php"><button>Iniciar Trabalhos</button></a>
+
+	<!--<form method="POST" action="">
 		<p>
 			Nome do Projeto: <input type="text" name="projeto">
 		</p>
@@ -32,6 +31,6 @@ require "src/registro.php";
 		<p>
 			Marque o horário em que está saindo: <input type="time" name="hora_final">
 		</p>
-		<input type="submit" value="enviar">
+		<input type="submit" value="enviar">-->
 </body>
 </html>

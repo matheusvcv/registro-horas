@@ -8,34 +8,39 @@ require 'src/registro.php';
 $desenvolvedor = New Registro($conexao);
 $devs = $desenvolvedor-> getDev();
 
-foreach($devs as $dev): ?>
-<p>
-<?php echo  $dev['nome'];  ?><br>
-<?php echo  $dev['usuario']; ?><br>
-<?php echo  $dev['senha']; ?><br>
-</p>
+$getProjetos = New Registro($conexao);
+$projetos = $getProjetos-> getProjeto();
 
-
-
-<?php endforeach; ?>
-
-
-<select name="dev">
-
-	<?php foreach($devs as $dev): ?>
-		<option value="<?php echo $_SESSION['id']; ?>"><?php echo $_SESSION['nome_dev'];  ?></option>
-
-	<?php endforeach; ?>
-	
-</select>
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" width="device-width initial-scale=1.0">
 	<title>Desenvolvedores</title>
 </head>
 <body>
-
+	<form method="POST" action="">
+		<p>Escolha um usuário:
+		<select name="dev">
+			<option value="indefinido">Escolha uma Opção: </option>
+			<?php foreach($devs as $dev): ?>
+				<option value="<?php echo $dev['id']; ?>"><?php echo $dev['nome']; ?></option><br>
+			<?php endforeach; ?>
+		</select>
+		</p>
+		<p>Escolha um Projeto:
+		<select name="projeto">
+			<option value="indefinido">Escolha uma Opção: </option>
+			<?php foreach($projetos as $projeto): ?>
+				<option value="<?php echo $projeto['id']; ?>"><?php echo $projeto['nome_projeto']; ?></option>
+			<?php endforeach; ?>
+		</select>
+		</p>
+		<p>
+			<input type="submit" value="Enviar">
+		</p>
+	</form>
 </body>
 </html>
