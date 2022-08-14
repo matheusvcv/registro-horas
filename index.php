@@ -6,7 +6,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 
 	if(strlen($_POST['usuario']) == 0){
 
-		echo "Por favor, preencha corretamente o campo referente ao seu e-mail;";
+		echo "Por favor, preencha corretamente o campo referente ao seu nome de usuário!";
 
 	}else if (strlen($_POST['senha']) == 0){
 		
@@ -60,7 +60,5 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 			<input type="submit" value="Enviar">
 		</p>
 	</form>
-
-	<?php echo $_SESSION['id']; ?>
 </body>
 </html>

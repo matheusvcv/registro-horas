@@ -1,18 +1,13 @@
 <?php
 
-session_start();
-
 require 'conexao.php';
 require 'src/registro.php';
-
-$desenvolvedor = New Registro($conexao);
-$devs = $desenvolvedor-> getDev();
+require 'protect.php';
 
 $getProjetos = New Registro($conexao);
 $projetos = $getProjetos-> getProjeto();
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,14 +16,10 @@ $projetos = $getProjetos-> getProjeto();
 	<title>Desenvolvedores</title>
 </head>
 <body>
+	<a href="logout.php">Sair</a>
 	<form method="POST" action="">
-		<p>Escolha um usuário:
-		<select name="dev">
-			<option value="indefinido">Escolha uma Opção: </option>
-			<?php foreach($devs as $dev): ?>
-				<option value="<?php echo $dev['id']; ?>"><?php echo $dev['nome']; ?></option><br>
-			<?php endforeach; ?>
-		</select>
+		<p>
+		Desenvolvedor: <input type="text" name="dev" value="<?php echo $_SESSION['nome']; ?>" disabled>
 		</p>
 		<p>Escolha um Projeto:
 		<select name="projeto">
