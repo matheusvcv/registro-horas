@@ -8,16 +8,16 @@ require 'src/registro.php';
 $desenvolvedor = New Registro($conexao);
 $devs = $desenvolvedor-> getDev();
 
-foreach($devs as $dev){
+foreach($devs as $dev): ?>
+<p>
+<?php echo  $dev['nome'];  ?><br>
+<?php echo  $dev['usuario']; ?><br>
+<?php echo  $dev['senha']; ?><br>
+</p>
 
-echo  $dev['id'];
-echo  $dev['nome'];
-echo  $dev['usuario'];
-echo  $dev['senha'];
 
-}
 
-?>
+<?php endforeach; ?>
 
 
 <select name="dev">
