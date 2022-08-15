@@ -28,6 +28,15 @@ require 'conexao.php';
 				return $devs;
 			}
 
+			public function getRegistros(): array
+			{
+				$getRegistros = $this->conexao->query("SELECT * FROM registros");
+
+				$reg = $getRegistros->fetch_all(MYSQLI_ASSOC); 
+
+				return $reg;
+			}
+
 			public function getProjeto(): array
 			{
 				$getProjeto = $this->conexao->query("SELECT * FROM projeto");
@@ -44,6 +53,7 @@ require 'conexao.php';
 				$inserir->bind_param('ssss', $id_desenvolvedor, $id_projeto, $hora_inicio, $hora_final);
 
 				$inserir->execute();
+
 			}
 
 			public function getHoras(int $id): array
@@ -57,6 +67,20 @@ require 'conexao.php';
 				$horarios = $queryHorarios->get_result()->fetch_assoc();
 
 				return $horarios;
+
+			}
+			
+			public function getRegistro(int $id): array
+			{
+				$queryRegistro = $this->conexao->prepare("SELECT * FROM registros WHERE id = ?");
+
+				$queryRegistro-> bind_param('i', $id);
+
+				$queryRegistro-> execute();
+
+				$registro = $queryRegistro->get_result()->fetch_assoc();
+
+				return $registro;
 
 			}
 

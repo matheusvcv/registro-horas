@@ -7,9 +7,8 @@ require 'protect.php';
 $_SESSION['hora_final'] = $_POST['hora_final'];
 date_default_timezone_set('America/Sao_Paulo');
 
-$inserir = New Registro($conexao);
-$insere_registro = $inserir->inserirRegistros($_SESSION['id'], $_SESSION['id_projeto'], $_SESSION['hora_inicio'], $_SESSION['hora_final']);
-
+$registro = New Registro($conexao);
+$insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_projeto'], $_SESSION['hora_inicio'], $_SESSION['hora_final']);
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +24,7 @@ $insere_registro = $inserir->inserirRegistros($_SESSION['id'], $_SESSION['id_pro
 			<h1>Registro de Horas Trabalhadas</h1>
 		</p>
 		<p>
-			Caro colaborador <?php echo $_SESSION['nome'] ?>
+			Caro colaborador <?php echo $_SESSION['nome']?> o seu registro foi inserido com sucesso! Para verificar <a href="inicio-4.php"><button>clique aqui</button></a>
 		</p>
 
 	</body>
