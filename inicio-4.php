@@ -9,6 +9,28 @@ date_default_timezone_set('America/Sao_Paulo');
 $registro = New Registro($conexao);
 $exibe_registro = $registro->getRegistros();
 
+foreach($exibe_registro as $registros){
+
+$_SESSION['id_registro'] = $registros['id'];
+
+$_SESSION['id_projeto'] =  $registros['id_projeto']; 
+
+$_SESSION['hora_inicio'] =  $registros['hora_inicio']; 
+
+$_SESSION['hora_final'] =  $registros['hora_final']; 
+
+}
+
+$inicio = $registros['hora_inicio'];
+$final = $registros['hora_final']; 
+
+$inicio = DateTime::createFromFormat('H:i:s', $inicio);
+$final = DateTime::createFromFormat('H:i:s', $final);
+
+$intervalo = $inicio->diff($final);
+
+
+		
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,21 +43,16 @@ $exibe_registro = $registro->getRegistros();
 		<p>
 			<a href="logout.php">Sair</a>
 		</p>
+		<p>
+			<strong>Hora de início: </strong><?php echo $registros['hora_inicio']; ?>
+		</p>
+		<p>
+			<strong>Hora Finalização: </strong><?php echo $registros['hora_final']; ?>
+		</p>
+		<p>
+			<strong>Total trabalhado hoje: </strong><?php echo $intervalo->format('%H:%I:%S');?>
+		</p>
 
-		<?php foreach($exibe_registro as $registro): ?>
-				
-			<p>
-				<strong>ID Registro:</strong><?php  echo $registro['id']; ?><br>
 
-				<strong>ID Projeto:</strong> <?php  echo $registro['id_projeto']; ?><br>
-
-				<strong>Horário início:</strong> <?php echo $registro['hora_inicio']; ?><br>
-
-				<strong>Horário final:</strong> <?php echo $registro['hora_final']; ?><br>
-
-				<br><a href="registro.php?id=<?php echo $registro_ind['id']; ?>"><button>Verificar</button></a>
-
-			</p>
-		<?php endforeach; ?>
 	</body>
 </html>

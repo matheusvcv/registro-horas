@@ -9,8 +9,6 @@ date_default_timezone_set('America/Sao_Paulo');
 $getProjetos = New Registro($conexao);
 $projetos = $getProjetos-> getProjeto();
 
-$id_desenvolvedor = $_SESSION['id'];
-
 ?>
 <!DOCTYPE html>
 <html>

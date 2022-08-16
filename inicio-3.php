@@ -5,6 +5,7 @@ require 'src/registro.php';
 require 'protect.php';
 
 $_SESSION['hora_final'] = $_POST['hora_final'];
+
 date_default_timezone_set('America/Sao_Paulo');
 
 $registro = New Registro($conexao);
