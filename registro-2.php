@@ -25,7 +25,7 @@ $insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_pr
 			<h1>Registro de Horas Trabalhadas</h1>
 		</p>
 		<p>
-			Caro colaborador <?php echo $_SESSION['nome']?> o seu registro foi inserido com sucesso! Para verificar <a href="inicio-4.php"><button>clique aqui</button></a>
+			Caro colaborador <?php echo $_SESSION['nome']?> o seu registro foi inserido com sucesso! Para verificar <a href="registro-3.php"><button>clique aqui</button></a>
 		</p>
 
 	</body>

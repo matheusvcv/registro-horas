@@ -4,13 +4,6 @@ require 'conexao.php';
 
 	class Registro
 	{
-		private $projeto;
-
-		private $data;
-
-		private $hora_inicio;
-
-		private $hora_final;
 
 		private $conexao;
 
@@ -56,19 +49,6 @@ require 'conexao.php';
 
 			}
 
-			public function getHoras(int $id): array
-			{
-				$queryHorarios = $this->conexao->prepare("SELECT hora_inicio, hora_final, horas_trabalhadas FROM registros WHERE id = ?");
-
-				$queryHorarios-> bind_param('i', $id);
-
-				$queryHorarios-> execute();
-
-				$horarios = $queryHorarios->get_result()->fetch_assoc();
-
-				return $horarios;
-
-			}
 			
 			public function getRegistro(int $id): array
 			{
@@ -82,6 +62,15 @@ require 'conexao.php';
 
 				return $registro;
 
+			}
+
+			public function atualizaHoras(string $horas_trabalhadas, int $id_registro)
+			{
+				$adicionaHoras = $this->conexao->prepare("UPDATE registros SET horas_trabalhadas=? WHERE id =?");
+
+				$adicionaHoras-> bind_param('si', $horas_trabalhadas, $id_registro);
+
+				$adicionaHoras->execute();
 			}
 
 

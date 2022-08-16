@@ -20,7 +20,7 @@ date_default_timezone_set('America/Sao_Paulo');
 	</head>
 	<body>
 		<a href="logout.php">Sair</a>
-		<form method="POST" action="inicio-3.php">
+		<form method="POST" action="registro-2.php">
 			<p>
 				Registro de horas trabalhadas iniciado. Assim que concluir, informe abaixo o horário de conclusão e aperte no botão "Enviar"!
 			</p>

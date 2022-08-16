@@ -19,7 +19,7 @@ $projetos = $getProjetos-> getProjeto();
 	</head>
 	<body>
 		<a href="logout.php">Sair</a>
-		<form method="POST" action="inicio-2.php">
+		<form method="POST" action="registro-1.php">
 			<p>
 			Desenvolvedor: <input type="text" name="dev" value="<?php echo $_SESSION['nome']; ?>" disabled>
 			</p>

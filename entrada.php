@@ -14,7 +14,7 @@ require "protect.php";
 
 	<h1>Registro de Horas trabalhadas</h1>
 
-	<a href="inicio.php"><button>Iniciar Trabalhos</button></a>
+	<a href="registro.php"><button>Iniciar Trabalhos</button></a>
 
 </body>
 </html>

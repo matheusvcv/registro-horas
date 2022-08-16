@@ -29,6 +29,13 @@ $final = DateTime::createFromFormat('H:i:s', $final);
 
 $intervalo = $inicio->diff($final);
 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+	$insereHora = New Registro($conexao);
+	$insere = $insereHora-> atualizaHoras($_POST['horas_trabalhadas'], $_SESSION['id_registro']);
+
+	header('Location: entrada.php');
+}
 
 		
 ?>
@@ -52,6 +59,11 @@ $intervalo = $inicio->diff($final);
 		<p>
 			<strong>Total trabalhado hoje: </strong><?php echo $intervalo->format('%H:%I:%S');?>
 		</p>
+		<form action="" method="POST">
+			<input type="hidden" name="horas_trabalhadas" value="<?php echo $intervalo->format('%H:%I:%S'); ?>">
+
+			<input type="submit" value="Registrar">
+		</form>
 
 
 	</body>
