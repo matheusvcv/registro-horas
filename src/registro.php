@@ -73,7 +73,4 @@ require 'conexao.php';
 				$adicionaHoras->execute();
 			}
 
-
-
-
 	}

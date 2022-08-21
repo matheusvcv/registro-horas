@@ -47,18 +47,27 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<br><div id="logo">
+		<img src="img/clock.png">		
+	</div><br>
+	<div id="login">
+		<h1>Login Registro de Horas Trabalhadas</h1>
+	</div>
+	<div id="login">
 	<form action="" method="POST">
-		<p>
+		<br><p>
 			Digite seu nome de usuário: <input type="text" name="usuario" placeholder="user name">
 		</p>
 		<p>
 			Digite sua senha: <input type="password" name="senha" placeholder="senha">
-		</p>
+		</p><br>
 		<p>
-			<input type="submit" value="Enviar">
+			<input type="submit" value="Entrar">
 		</p>
 	</form>
+	</div><br>
 </body>
 </html>

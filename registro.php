@@ -9,6 +9,7 @@ date_default_timezone_set('America/Sao_Paulo');
 $getProjetos = New Registro($conexao);
 $projetos = $getProjetos-> getProjeto();
 
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -8,13 +8,27 @@ require "protect.php";
 <head>
 	<meta charset="utf-8">
 	<title>Registro de Horas</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<a href="logout.php">Sair</a>
+	<div id="container">
+	<div id="sair">
+		<button><a href="logout.php">Sair</a></button>
+	</div>
+		<h1>Registro de Horas trabalhadas</h1>
+	</div>
+	<div id="container">
+	<div id="logo">
+		<img src="img/code.png">
+	</div>
+	<p>
+		Olá, <?php echo $_SESSION['nome']; ?>! O que você gostaria de fazer?
+	</p>
+	<a href="registro.php"><button class="botao">Iniciar Trabalhos</button></a>
 
-	<h1>Registro de Horas trabalhadas</h1>
+	<a href="exibe-horas.php?id=<?php echo $_SESSION['id']; ?>"><button class="botao">Verificar Registros</button></a>
 
-	<a href="registro.php"><button>Iniciar Trabalhos</button></a>
+	</div>
 
 </body>
 </html>
