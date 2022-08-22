@@ -20,13 +20,13 @@ require "protect.php";
 	<div id="container">
 	<div id="logo">
 		<img src="img/code.png">
-	</div>
+	</div><br>
 	<p>
-		Olá, <?php echo $_SESSION['nome']; ?>! O que você gostaria de fazer?
-	</p>
+		Olá, <strong><?php echo $_SESSION['nome']; ?></strong>! O que você gostaria de fazer?
+	</p><br>
 	<a href="registro.php"><button class="botao">Iniciar Trabalhos</button></a>
 
-	<a href="exibe-horas.php?id=<?php echo $_SESSION['id']; ?>"><button class="botao">Verificar Registros</button></a>
+	<a href="exibe-horas.php"><button class="botao">Verificar Registros</button></a>
 
 	</div>
 

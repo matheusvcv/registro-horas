@@ -9,7 +9,6 @@ date_default_timezone_set('America/Sao_Paulo');
 $getProjetos = New Registro($conexao);
 $projetos = $getProjetos-> getProjeto();
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +34,6 @@ $projetos = $getProjetos-> getProjeto();
 			<p>
 				Horário de Início: <input type="time" name="hora_inicio" value="<?php echo $atual; ?>">
 			</p>
-
 			<input type="hidden" name="id_desenvolvedor" value="<?php echo $_SESSION['id']; ?>">
 			<input type="hidden" name="nome" value="<?php echo $_SESSION['nome']; ?>">
 

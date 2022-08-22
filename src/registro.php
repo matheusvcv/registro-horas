@@ -39,6 +39,15 @@ require 'conexao.php';
 				return $projetos;
 			}
 
+			public function getProjetoInd(int $id): array
+			{
+				$getProjeto = $this->conexao->query("SELECT * FROM projeto WHERE id = $id");
+
+				$projetos = $getProjeto->fetch_all(MYSQLI_ASSOC); 
+
+				return $projetos;
+			}
+
 			public function inserirRegistros(string $id_desenvolvedor, string $id_projeto, string $hora_inicio, string $hora_final): void
 			{
 				$inserir = $this->conexao->prepare("INSERT INTO registros(id_desenvolvedor, id_projeto, hora_inicio, hora_final) VALUES (?,?,?,?)");
@@ -59,6 +68,16 @@ require 'conexao.php';
 				$queryRegistro-> execute();
 
 				$registro = $queryRegistro->get_result()->fetch_assoc();
+
+				return $registro;
+
+			}
+
+			public function getRegistroPorProjeto(int $id_desenvolvedor, int $id_projeto): array
+			{
+				$queryRegistro = $this->conexao->query("SELECT * FROM registros WHERE id_desenvolvedor = $id_desenvolvedor AND id_projeto = $id_projeto");
+
+				$registro = $queryRegistro->fetch_all(MYSQLI_ASSOC);
 
 				return $registro;
 

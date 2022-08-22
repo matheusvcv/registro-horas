@@ -7,6 +7,14 @@ require 'protect.php';
 date_default_timezone_set('America/Sao_Paulo');
 
 $registro = New Registro($conexao);
+
+$projetoInd = $registro->getProjetoInd($_SESSION['id_projeto']);
+
+	foreach($projetoInd as $projeto){
+
+		$_SESSION['nome_do_projeto'] = $projeto['nome_projeto'];
+	}
+
 $exibe_registro = $registro->getRegistros();
 
 foreach($exibe_registro as $registros){

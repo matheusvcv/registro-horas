@@ -7,7 +7,6 @@ require 'protect.php';
 $_SESSION['hora_inicio'] = $_POST['hora_inicio'];
 $_SESSION['id_projeto'] = $_POST['projeto'];
 
-
 date_default_timezone_set('America/Sao_Paulo');
 
 ?>
