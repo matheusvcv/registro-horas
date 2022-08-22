@@ -48,11 +48,11 @@ require 'conexao.php';
 				return $projetos;
 			}
 
-			public function inserirRegistros(string $id_desenvolvedor, string $id_projeto, string $hora_inicio, string $hora_final): void
+			public function inserirRegistros(string $id_desenvolvedor, string $id_projeto, string $data, string $hora_inicio, string $hora_final): void
 			{
-				$inserir = $this->conexao->prepare("INSERT INTO registros(id_desenvolvedor, id_projeto, hora_inicio, hora_final) VALUES (?,?,?,?)");
+				$inserir = $this->conexao->prepare("INSERT INTO registros(id_desenvolvedor, id_projeto, data, hora_inicio, hora_final) VALUES (?,?,?,?,?)");
 
-				$inserir->bind_param('ssss', $id_desenvolvedor, $id_projeto, $hora_inicio, $hora_final);
+				$inserir->bind_param('sssss', $id_desenvolvedor, $id_projeto, $data, $hora_inicio, $hora_final);
 
 				$inserir->execute();
 

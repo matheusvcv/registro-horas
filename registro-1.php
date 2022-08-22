@@ -4,6 +4,7 @@ require 'conexao.php';
 require 'src/registro.php';
 require 'protect.php';
 
+$_SESSION['data'] = $_POST['data'];
 $_SESSION['hora_inicio'] = $_POST['hora_inicio'];
 $_SESSION['id_projeto'] = $_POST['projeto'];
 

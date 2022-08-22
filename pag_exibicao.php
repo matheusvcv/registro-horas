@@ -25,10 +25,10 @@ $projetos = $registro-> getRegistroPorProjeto($_SESSION['id'], $_GET['id']);
 	</p>
 	<p>
 		<strong>Horas Trabalhadas: </strong><?php echo $projeto['horas_trabalhadas']; ?>
-	</p>
+	</p><br>
 	<?php endforeach; ?>
 
 	<a href="entrada.php"><button>Voltar</button></a>
-	
+
 </body>
 </html>

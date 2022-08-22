@@ -23,6 +23,7 @@ $projetos = $getProjetos-> getProjeto();
 			<p>
 			Desenvolvedor: <input type="text" name="dev" value="<?php echo $_SESSION['nome']; ?>" disabled>
 			</p>
+			Digite a data de hoje: <input type="date" name="data">
 			<p>Escolha um Projeto:
 			<select name="projeto">
 				<option value="indefinido">Escolha uma Opção: </option>

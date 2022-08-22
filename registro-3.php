@@ -59,6 +59,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 			<a href="logout.php">Sair</a>
 		</p>
 		<p>
+			<strong>Data: </strong><?php echo $registros['data']; ?>
+		</p>
+		<p>
 			<strong>Hora de início: </strong><?php echo $registros['hora_inicio']; ?>
 		</p>
 		<p>

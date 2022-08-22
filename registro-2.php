@@ -9,7 +9,7 @@ $_SESSION['hora_final'] = $_POST['hora_final'];
 date_default_timezone_set('America/Sao_Paulo');
 
 $registro = New Registro($conexao);
-$insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_projeto'], $_SESSION['hora_inicio'], $_SESSION['hora_final']);
+$insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_projeto'], $_SESSION['data'], $_SESSION['hora_inicio'], $_SESSION['hora_final']);
 
 ?>
 <!DOCTYPE html>
