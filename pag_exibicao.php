@@ -8,6 +8,10 @@ $projetos = $registro-> getRegistroPorProjeto($_SESSION['id'], $_GET['id']);
 
 $projetoInd = $registro-> getProjetoInd($_GET['id']);
 
+$horas = $registro-> getHoras($_SESSION['id'], $_GET['id']);
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +51,9 @@ $projetoInd = $registro-> getProjetoInd($_GET['id']);
 			</div><br>
 
 			<?php endforeach; ?>
+
 		<a href="entrada.php"><button>Voltar</button></a>
+
 	</div><br>
 </body>
 </html>

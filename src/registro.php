@@ -92,4 +92,13 @@ require 'conexao.php';
 				$adicionaHoras->execute();
 			}
 
+			public function getHoras(int $id_desenvolvedor, int $id_projeto): array
+			{
+				$getHoras = $this->conexao->query("SELECT horas_trabalhadas FROM registros WHERE id_desenvolvedor = $id_desenvolvedor AND id_projeto = $id_projeto");
+
+				$horas = $getHoras->fetch_all(MYSQLI_ASSOC);
+
+				return $horas;
+			}
+
 	}
