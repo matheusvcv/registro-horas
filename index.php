@@ -46,8 +46,9 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Login</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/clock.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Login</title>
 </head>
 <body>
 	<br><div id="logo">

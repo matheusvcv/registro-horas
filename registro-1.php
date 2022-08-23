@@ -16,6 +16,7 @@ date_default_timezone_set('America/Sao_Paulo');
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" width="device-width initial-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/clock.png">
 		<title>Desenvolvedores</title>
 	</head>
 	<body>

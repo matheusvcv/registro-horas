@@ -7,8 +7,9 @@ require "protect.php";
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Registro de Horas</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/clock.png">
+	<title>Registro de Horas</title>
 </head>
 <body>
 	<div id="container">
