@@ -11,6 +11,44 @@ $projetoInd = $registro-> getProjetoInd($_GET['id']);
 $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 
 
+	function segundo_em_tempo($segundos){
+
+		$horas = floor($segundos/3600);
+
+		$minutos = floor($segundos % 3600/60);
+
+		$segundos = $segundos % 60;
+
+		return sprintf("%d:%02d:%02d", $horas, $minutos, $segundos);
+	}
+
+	while($row = $resultado-> fetch_array(MYSQLI_NUM)){
+
+		$arr[] = $row[0];
+
+	} 
+
+	$soma = 0;
+
+		foreach($arr as $hora){
+
+			list($horas, $minutos, $segundos) = explode(':', $hora);
+
+			$calc = $horas * 3600 + $minutos * 60 + $segundos;
+
+			echo '<p>' . $hora . ' em segundos é: ' . $calc . '</p>';
+
+			$soma = $soma + $calc;
+		}
+
+	echo "<hr>";
+
+	echo segundo_em_tempo($soma);
+
+		die();
+
+
+
 
 
 ?>
