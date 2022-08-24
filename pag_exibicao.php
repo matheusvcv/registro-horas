@@ -36,20 +36,8 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 
 			$calc = $horas * 3600 + $minutos * 60 + $segundos;
 
-			echo '<p>' . $hora . ' em segundos é: ' . $calc . '</p>';
-
 			$soma = $soma + $calc;
 		}
-
-	echo "<hr>";
-
-	echo segundo_em_tempo($soma);
-
-		die();
-
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -67,26 +55,7 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 			Caro colaborador <strong><?php echo $_SESSION['nome']; ?></strong> segue abaixo o relatório das suas contribuições no projeto <strong><?php foreach($projetoInd as $ind){echo $ind['nome_projeto'];} ?></strong>:
 		</p><br>
 
-			<table align="center">
-					<tr>
-						<th>Nome</th>
-						<th>Data</th>
-						<th>Hora Inicio</th>
-						<th>Hora Final</th>
-						<th>Horas Trabalhadas</th>
-					</tr>
-
-				<?php foreach($projetos as $projeto): ?>
-
-					<tr>
-						<td><?php echo $_SESSION['nome']; ?></td>
-						<td><?php $usoData = strtotime($projeto['data']); echo date('d/m/y', $usoData); ?></td>
-						<td><?php echo $projeto['hora_inicio']; ?></td>
-						<td><?php echo $projeto['hora_final']; ?></td>
-						<td><?php echo $projeto['horas_trabalhadas']; ?></td>
-					</tr>
-
-				<?php endforeach; ?>
+		<p>O total de tempo investido foi: <strong><?php echo segundo_em_tempo($soma); ?></strong></p>
 
 		<?php foreach($projetos as $projeto): ?>
 

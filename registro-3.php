@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 			<a href="logout.php">Sair</a>
 		</p>
 		<p>
-			<strong>Data: </strong><?php echo $registros['data']; ?>
+			<strong>Data: </strong><?php $usoData = strtotime($registros['data']); echo date('d/m/y', $usoData); ?>
 		</p>
 		<p>
 			<strong>Hora de início: </strong><?php echo $registros['hora_inicio']; ?>
