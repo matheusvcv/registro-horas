@@ -4,6 +4,18 @@ body{
 	background: black;
 }
 
+table{
+  width: 80%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table, td, th{
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+}
+
 #container{
 	border: solid 1px black;
 	width: 90%;

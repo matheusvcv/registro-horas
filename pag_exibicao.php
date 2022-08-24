@@ -8,7 +8,8 @@ $projetos = $registro-> getRegistroPorProjeto($_SESSION['id'], $_GET['id']);
 
 $projetoInd = $registro-> getProjetoInd($_GET['id']);
 
-$horas = $registro-> getHoras($_SESSION['id'], $_GET['id']);
+$resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
+
 
 
 
@@ -28,7 +29,29 @@ $horas = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 			Caro colaborador <strong><?php echo $_SESSION['nome']; ?></strong> segue abaixo o relatório das suas contribuições no projeto <strong><?php foreach($projetoInd as $ind){echo $ind['nome_projeto'];} ?></strong>:
 		</p><br>
 
+			<table align="center">
+					<tr>
+						<th>Nome</th>
+						<th>Data</th>
+						<th>Hora Inicio</th>
+						<th>Hora Final</th>
+						<th>Horas Trabalhadas</th>
+					</tr>
+
+				<?php foreach($projetos as $projeto): ?>
+
+					<tr>
+						<td><?php echo $_SESSION['nome']; ?></td>
+						<td><?php $usoData = strtotime($projeto['data']); echo date('d/m/y', $usoData); ?></td>
+						<td><?php echo $projeto['hora_inicio']; ?></td>
+						<td><?php echo $projeto['hora_final']; ?></td>
+						<td><?php echo $projeto['horas_trabalhadas']; ?></td>
+					</tr>
+
+				<?php endforeach; ?>
+
 		<?php foreach($projetos as $projeto): ?>
+
 
 			<br><div id="faixa"><strong>
 				<?php
@@ -52,7 +75,7 @@ $horas = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 
 			<?php endforeach; ?>
 
-		<a href="entrada.php"><button>Voltar</button></a>
+		<a href="entrada.php"><button>Voltar</button></a><br>
 
 	</div><br>
 </body>
