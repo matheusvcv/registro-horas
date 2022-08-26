@@ -14,7 +14,7 @@ require "protect.php";
 <body>
 	<div id="container">
 	<div id="sair">
-		<button><a href="logout.php">Sair</a></button>
+		<a href="logout.php"><button id="button">Sair</button></a>
 	</div>
 		<h1>Registro de Horas trabalhadas</h1>
 	</div>

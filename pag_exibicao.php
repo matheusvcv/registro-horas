@@ -51,11 +51,18 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 </head>
 <body>
 	<div id="container">
+		<h1>Relatório de Tempo investido:</h1>
+	</div>
+	<div id="container">
 		<p>
-			Caro colaborador <strong><?php echo $_SESSION['nome']; ?></strong> segue abaixo o relatório das suas contribuições no projeto <strong><?php foreach($projetoInd as $ind){echo $ind['nome_projeto'];} ?></strong>:
+			Caro colaborador <strong><?php echo $_SESSION['nome']; ?></strong> o total de tempo investido no projeto  <strong><?php foreach($projetoInd as $ind){echo $ind['nome_projeto'];} ?></strong> foi <strong><?php echo segundo_em_tempo($soma); ?></strong>.
+		</p>
+		<p>
+			 Segue abaixo o relatório das suas contribuições no projeto:
+
 		</p><br>
 
-		<p>O total de tempo investido foi: <strong><?php echo segundo_em_tempo($soma); ?></strong></p>
+		<p></strong></p>
 
 		<?php foreach($projetos as $projeto): ?>
 

@@ -19,14 +19,13 @@ $projeto_dev = $projetos->getProjeto();
 </head>
 	<body>
 		<div id="container">
-				<h1>Registro de Horas Trabalhadas</h1>		
+			<div id="sair">
+				<a href="logout.php"><button id="button">Sair</button></a>
+			</div>
+			<h1>Registro de Horas Trabalhadas</h1>		
 		</div>
 		<div id ="container">
-			<div id="sair">
-				<a href="logout.php"><button>Sair</button></a>
-			</div>
-			
-			<h2>Colaborador <?php echo $_SESSION['nome']; ?> você gostaria de verificar a quantidade de horas trabalhadas em qual projeto?</h2>
+			<p>Colaborador <strong><?php echo $_SESSION['nome']; ?></strong> você gostaria de verificar a quantidade de horas trabalhadas em qual projeto?</p><br>
 
 				<?php foreach($projeto_dev as $projeto): ?>
 		
@@ -36,7 +35,7 @@ $projeto_dev = $projetos->getProjeto();
 
 				<?php endforeach; ?>
 
-				<a href="entrada.php"><button>Voltar</button></a>
+				<br><a href="entrada.php"><button>Voltar</button></a>
 		</div>
 	</body>
 </html>

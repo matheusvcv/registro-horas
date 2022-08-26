@@ -27,6 +27,17 @@ table, td, th{
 	font-family: Verdana, Helvetica, Arial;
 }
 
+#container1{
+	border: solid 1px black;
+	width: 90%;
+	border-radius: 10px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 40px 40px;
+	text-align: center;
+	font-family: Verdana, Helvetica, Arial;
+}
+
 #login{
 	border: solid 1px black;
 	width: 70%;
@@ -77,6 +88,14 @@ table, td, th{
 	height: 50px;
 	font-family: Verdana, Helvetica, Arial;
 	border-radius: 10px;
-	background-color: 	#C0C0C0;
+	background-color: #C0C0C0;
 }
 
+#button{
+  border-radius: 50px;
+  border: 1px solid #333;
+  background-color: #C0C0C0;
+  color: black;
+  height: 25px;
+  width: 65px;
+}

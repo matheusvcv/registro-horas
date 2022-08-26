@@ -17,14 +17,15 @@ $insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_pr
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/clock.png">
 	<title>Desenvolvedores</title>
 </head>
 	<body>
-		<a href="logout.php">Sair</a>
-		<p>
+		<div id="container">
+		<a href="logout.php"><button id="button">Sair</button></a>
 			<h1>Registro de Horas Trabalhadas</h1>
-		</p>
+		</div>
 		<p>
 			Caro colaborador <?php echo $_SESSION['nome']?> o seu registro foi inserido com sucesso! Para verificar <a href="registro-3.php"><button>clique aqui</button></a>
 		</p>
