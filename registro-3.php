@@ -53,30 +53,34 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	<meta charset="utf-8">
 	<meta name="viewport" width="device-width initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="img/clock.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Desenvolvedores</title>
 </head>
 	<body>
-		<p>
-			<a href="logout.php">Sair</a>
-		</p>
-		<p>
-			<strong>Data: </strong><?php $usoData = strtotime($registros['data']); echo date('d/m/y', $usoData); ?>
-		</p>
-		<p>
-			<strong>Hora de início: </strong><?php echo $registros['hora_inicio']; ?>
-		</p>
-		<p>
-			<strong>Hora Finalização: </strong><?php echo $registros['hora_final']; ?>
-		</p>
-		<p>
-			<strong>Total trabalhado hoje: </strong><?php echo $intervalo->format('%H:%I:%S');?>
-		</p>
-		<form action="" method="POST">
-			<input type="hidden" name="horas_trabalhadas" value="<?php echo $intervalo->format('%H:%I:%S'); ?>">
+		<div id="container">
+			<div id="sair">
+				<a href="logout.php"><button id="button">Sair</button></a>
+			</div>
+			<h1>Registro Atual</h1>
+		</div>
+		<div id="container">
+			<p>
+				<strong>Data: </strong><?php $usoData = strtotime($registros['data']); echo date('d/m/y', $usoData); ?>
+			</p>
+			<p>
+				<strong>Hora de início: </strong><?php echo $registros['hora_inicio']; ?>
+			</p>
+			<p>
+				<strong>Hora Finalização: </strong><?php echo $registros['hora_final']; ?>
+			</p>
+			<p>
+				<strong>Total trabalhado hoje: </strong><?php echo $intervalo->format('%H:%I:%S');?>
+			</p>
+			<form action="" method="POST">
+				<input type="hidden" name="horas_trabalhadas" value="<?php echo $intervalo->format('%H:%I:%S'); ?>">
 
-			<input type="submit" value="Registrar">
-		</form>
-
-
+				<input type="submit" value="Registrar">
+			</form>
+		</div>
 	</body>
 </html>

@@ -23,12 +23,19 @@ $insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_pr
 </head>
 	<body>
 		<div id="container">
-		<a href="logout.php"><button id="button">Sair</button></a>
+		<div id="sair">
+			<a href="logout.php"><button id="button">Sair</button></a>
+		</div>
 			<h1>Registro de Horas Trabalhadas</h1>
 		</div>
-		<p>
-			Caro colaborador <?php echo $_SESSION['nome']?> o seu registro foi inserido com sucesso! Para verificar <a href="registro-3.php"><button>clique aqui</button></a>
-		</p>
+		<div id="container">
+			<p>
+				Caro colaborador <strong><?php echo $_SESSION['nome']?></strong> o seu registro foi inserido com sucesso!
+			</p>
+			<p>
+				Para verificar <a href="registro-3.php"><button>Clique aqui</button></a>
+			</p>
+		</div>
 
 	</body>
 </html>
