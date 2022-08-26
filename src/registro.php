@@ -58,6 +58,15 @@ require 'conexao.php';
 
 			}
 
+			public function insereProjeto(string $nome_projeto)
+			{
+				$inserir = $this->conexao->prepare("INSERT INTO projeto(nome_projeto) VALUES(?)");
+
+				$inserir->bind_param('s', $nome_projeto);
+
+				$inserir-> execute();
+			}
+
 			
 			public function getRegistro(int $id): array
 			{

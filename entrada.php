@@ -29,6 +29,8 @@ require "protect.php";
 
 	<a href="exibe-horas.php"><button class="botao">Verificar Registros</button></a>
 
+	<a href="inserir-projetos.php"><button class="botao">Inserir Novo Projeto</button></a>
+
 	</div>
 
 </body>
