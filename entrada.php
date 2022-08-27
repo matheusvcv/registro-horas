@@ -25,13 +25,16 @@ require "protect.php";
 	<p>
 		Olá, <strong><?php echo $_SESSION['nome']; ?></strong>! O que você gostaria de fazer?
 	</p><br>
-	<a href="registro.php"><button class="botao">Iniciar Trabalhos</button></a>
+	<p>
+		<a href="registro.php"><button class="botao">INICIAR TRABALHOS</button></a>
 
-	<a href="exibe-horas.php"><button class="botao">Verificar Registros</button></a>
+		<a href="exibe-horas.php"><button class="botao">VERIFICAR REGISTROS</button></a>
+	</p>
+	<p>
+		<a href="inserir-projetos.php"><button class="botao">INSERIR PROJETO</button></a>
 
-	<a href="inserir-projetos.php"><button class="botao">Inserir Novo Projeto</button></a>
-	<a href="deletar-projeto.php"><button class="botao">Deletar um Projeto</button></a>
-
+		<a href="deletar-projeto.php"><button class="botao">DELETAR UM PROJETO</button></a>
+	</p>
 	</div>
 
 </body>

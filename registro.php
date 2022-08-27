@@ -56,6 +56,7 @@ $projetos = $getProjetos-> getProjeto();
 					<input type="submit" value="Enviar">
 				</p>
 			</form>
+			<a href="entrada.php"><button id="button">Voltar</button></a><br>
 		</div>
 	</body>
 </html>

@@ -54,16 +54,16 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 	<br><div id="logo">
 		<img src="img/clock.png">		
 	</div><br>
-	<div id="login">
+	<div id="container">
 		<h1>Login Registro de Horas Trabalhadas</h1>
 	</div>
-	<div id="login">
+	<div id="container">
 	<form action="" method="POST">
 		<br><p>
-			Digite seu nome de usuário: <input type="text" name="usuario" placeholder="user name">
+			<strong>Digite seu nome de usuário:</strong> <input type="text" name="usuario" placeholder="user name">
 		</p>
 		<p>
-			Digite sua senha: <input type="password" name="senha" placeholder="senha">
+			<strong>Digite sua senha:</strong> <input type="password" name="senha" placeholder="senha">
 		</p><br>
 		<p>
 			<input type="submit" value="Entrar">
