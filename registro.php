@@ -44,6 +44,9 @@ $projetos = $getProjetos-> getProjeto();
 				</select>
 				</p>
 				<p>
+					Caso seu projeto ainda não esteja cadastrado, cadastreo <a href="inserir-projetos.php">clicando aqui.</a>
+				</p>
+				<p>
 					<strong>Horário de Início:</strong> <input type="time" name="hora_inicio" value="<?php echo $atual; ?>">
 				</p>
 				<input type="hidden" name="id_desenvolvedor" value="<?php echo $_SESSION['id']; ?>">

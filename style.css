@@ -4,16 +4,9 @@ body{
 	background: black;
 }
 
-table{
-  width: 80%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
+.justificado{
+	text-align: justify;
 
-table, td, th{
-  border: 1px solid black;
-  vertical-align: middle;
-  text-align: center;
 }
 
 #container{
@@ -58,16 +51,6 @@ table, td, th{
 	font-family: Verdana, Helvetica, Arial;
 }
 
-/*#quadro{
-	border: solid 1px black;
-	width: 90%;
-	border-radius: 10px;
-	margin: 0 auto;
-	background-color: whitesmoke;
-	padding: 40px 40px;
-	font-family: Verdana, Helvetica, Arial;
-}*/
-
 #bloco{
 	border: solid 1px black;
 	width: 290px;
@@ -77,6 +60,15 @@ table, td, th{
 }
 
 #faixa{
+	border: solid 1px black;
+	width: 290px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#faixa1{
+	background-color: black;
+	color: white;
 	border: solid 1px black;
 	width: 290px;
 	padding: 10px;
