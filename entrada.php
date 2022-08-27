@@ -30,6 +30,7 @@ require "protect.php";
 	<a href="exibe-horas.php"><button class="botao">Verificar Registros</button></a>
 
 	<a href="inserir-projetos.php"><button class="botao">Inserir Novo Projeto</button></a>
+	<a href="deletar-projeto.php"><button class="botao">Deletar um Projeto</button></a>
 
 	</div>
 

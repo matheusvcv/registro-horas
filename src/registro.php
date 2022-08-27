@@ -110,4 +110,13 @@ require 'conexao.php';
 				return $getHoras;
 			}
 
+			public function deletaProjeto(int $id): void
+			{
+				$deletar = $this->conexao->prepare("DELETE FROM projeto WHERE id = ?");
+
+				$deletar-> bind_param('i', $id);
+
+				$deletar-> execute();
+			}
+
 	}

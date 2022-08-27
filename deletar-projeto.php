@@ -39,7 +39,7 @@ $projetos = $getProjetos-> getProjeto();
 				</p>
 			</div>
 			<div id="faixa1">
-				<button>Deletar</button>
+				<a href="deletar.php?id=<?php echo $projeto['id']; ?>"><button>Deletar</button></a>
 			</div><br>
 			<?php endforeach; ?>
 			<a href="entrada.php"><button id="button">Voltar</button></a><br>
