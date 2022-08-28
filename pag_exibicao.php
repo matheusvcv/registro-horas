@@ -19,7 +19,7 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 
 		$segundos = $segundos % 60;
 
-		return sprintf("%d:%02d:%02d", $horas, $minutos, $segundos);
+		return sprintf("%02d:%02d:%02d", $horas, $minutos, $segundos);
 	}
 
 	while($row = $resultado-> fetch_array(MYSQLI_NUM)){
@@ -71,7 +71,7 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 					<th>Total de Tempo Investido</th>
 				</tr>
 				<tr>
-					<td><?php echo $projeto['data']; ?></td>
+					<td><?php $data = strtotime($projeto['data']); echo date('d/m/y', $data); ?></td>
 					<td><?php echo $projeto['hora_inicio']; ?></td>
 					<td><?php echo $projeto['hora_final'] ?></td>
 					<td><?php echo $projeto['horas_trabalhadas'] ?></td>
