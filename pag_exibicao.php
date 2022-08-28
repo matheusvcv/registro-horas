@@ -63,31 +63,23 @@ $resultado = $registro-> getHoras($_SESSION['id'], $_GET['id']);
 
 		<?php foreach($projetos as $projeto): ?>
 
+			<table>
+				<tr>
+					<th>Data</th>
+					<th>Horário de Início</th>
+					<th>Horário de Finalização</th>
+					<th>Total de Tempo Investido</th>
+				</tr>
+				<tr>
+					<td><?php echo $projeto['data']; ?></td>
+					<td><?php echo $projeto['hora_inicio']; ?></td>
+					<td><?php echo $projeto['hora_final'] ?></td>
+					<td><?php echo $projeto['horas_trabalhadas'] ?></td>
+				</tr><br>
+			</table><br>
 
-			<br><div id="faixa"><strong>
-				<?php
-					$usoData = strtotime($projeto['data']); 
-					echo date('d/m/y', $usoData);
+		<?php endforeach; ?>
 
-				?></strong>
-			</div>
-
-			<div id="bloco" align="center">
-				<p>
-					<strong>Hora de início: </strong><?php echo $projeto['hora_inicio'];?>
-				</p>
-				<p>
-					<strong>Hora de Finalização: </strong><?php echo $projeto['hora_final'];?>
-				</p>
-				<p>
-					<strong>Horas Trabalhadas: </strong><?php echo $projeto['horas_trabalhadas']; ?>
-				</p>
-			</div><br>
-
-			<?php endforeach; ?>
-
-		<a href="entrada.php"><button>Voltar</button></a><br>
-
-	</div><br>
+		<br><a href="entrada.php"><button>Voltar</button></a><br>
 </body>
 </html>

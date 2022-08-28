@@ -4,6 +4,32 @@ body{
 	background: black;
 }
 
+table, td, th{
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Verdana, Helvetica, Arial;
+}
+
+th{
+	color: black;
+	background-color: #A9A9A9;
+}
+
+td{
+	color: black;
+	background-color: #D3D3D3;
+}
+
+table{
+  width: 80%;
+  table-layout: fixed;
+  border-radius: 5px;
+  border-collapse: collapse;
+  font-family: Verdana, Helvetica, Arial;
+}
+
 .justificado{
 	text-align: justify;
 
@@ -11,6 +37,7 @@ body{
 
 #container{
 	border: solid 1px black;
+	display: inline flex;
 	width: 90%;
 	border-radius: 10px;
 	margin: 0 auto;
@@ -49,14 +76,6 @@ body{
 #sair{
 	text-align: right;
 	font-family: Verdana, Helvetica, Arial;
-}
-
-#bloco{
-	border: solid 1px black;
-	width: 290px;
-	height: 110px;
-	padding: 10px;
-	border-radius: 5px;
 }
 
 #faixa{

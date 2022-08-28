@@ -29,9 +29,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 			<form method="POST" action="">
 
-				<input type="submit" value="Deletar">
+				<input type="submit" value="Deletar"><br>
 			</form>
-			<a href="entrada.php"><button id="button">Voltar</button></a><br>
+			<br><a href="entrada.php"><button id="button">Voltar</button></a><br>
 		</div>
 	</body>
 </html>
