@@ -30,7 +30,7 @@ $insere_registro = $registro->inserirRegistros($_SESSION['id'], $_SESSION['id_pr
 		</div>
 		<div id="container">
 			<p>
-				Caro colaborador <strong><?php echo $_SESSION['nome']?></strong> o seu registro foi inserido com sucesso!
+				Caro colaborador <strong><?php echo $_SESSION['nome']?></strong> o seu registro foi captado com sucesso!
 			</p>
 			<p>
 				Para verificar <a href="registro-3.php"><button>Clique aqui</button></a>

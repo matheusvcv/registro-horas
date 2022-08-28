@@ -86,13 +86,15 @@ table{
 }
 
 #faixa1{
-	background-color: black;
+	background-color: #4F4F4F;
 	color: white;
 	border: solid 1px black;
 	width: 290px;
 	padding: 10px;
 	border-radius: 5px;
-}
+	margin: 0 auto;
+
+	}
 
 .botao{
 	width: 180px;
@@ -110,4 +112,14 @@ table{
   color: white;
   height: 25px;
   width: 65px;
+}
+
+#bloco{
+	text-align: center;
+	border: solid 1px black;
+	width: 290px;
+	height: 110px;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 0 auto;
 }

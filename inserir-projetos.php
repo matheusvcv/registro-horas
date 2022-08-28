@@ -30,12 +30,13 @@ $insereProjeto = new Registro($conexao);
 		<form method="POST" action="">
 			<img src="img/project.png"><br>
 			<br><p>
-				<strong>Nome do novo Projeto:</strong> <input type="text" name="nome_projeto">
+				<strong>Nome do novo Projeto:</strong> <input type="text" name="nome_projeto" required>
 			</p>
 			<p>
 				<input type="submit" value="Cadastrar">
 			</p>
 		</form>
+		<a href="entrada.php"><button id="button">Voltar</button></a><br>
 	</div>
 </body>
 </html>

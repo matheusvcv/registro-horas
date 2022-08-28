@@ -27,7 +27,7 @@ $projetos = $getProjetos-> getProjeto();
 					Segue abaixo a lista dos projetos cadastrados. Você pode deletar qualquer um deles, uma vez que tenha concluído ou abandonado o projeto. No entanto, tenha em mente que caso o faça, você não poderar reaver os registros novamente. Um vez que os registros tenham sido apagados, eles não poderão ser recuperados.
 			</p><br>
 			<?php foreach($projetos as $projeto): ?>
-			<div id="faixa1">
+			<br><div id="faixa1" align="">
 				Projeto
 			</div>
 			<div id="bloco">
