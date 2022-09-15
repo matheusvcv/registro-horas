@@ -66,7 +66,7 @@ if(isset($_POST['usuario']) || isset($_POST['senha'])){
 			<strong>Digite sua senha:</strong> <input type="password" name="senha" placeholder="senha">
 		</p><br>
 		<p>
-			<input type="submit" value="Entrar">
+			<input type="submit" class="enviar" value="Entrar">
 		</p>
 	</form>
 	</div><br>

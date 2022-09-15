@@ -123,3 +123,10 @@ table{
 	border-radius: 5px;
 	margin: 0 auto;
 }
+
+.enviar {
+	width: 90px;
+	color: white;
+	background-color: black;
+	border-radius: 8px;
+	border: solid 1px black

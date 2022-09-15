@@ -25,6 +25,7 @@ require "protect.php";
 	<p>
 		Olá, <strong><?php echo $_SESSION['nome']; ?></strong>! O que você gostaria de fazer?
 	</p><br>
+
 	<p>
 		<a href="registro.php"><button class="botao">INICIAR TRABALHOS</button></a>
 
